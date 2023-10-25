@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC8360E1-AAE6-4F88-A570-CAC68B89A1C6}</ProjectGuid>
+    <ProjectGuid>{9B7DC86C-A28B-4B6B-9F91-581D06446D58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Homework_26_10</RootNamespace>
-    <AssemblyName>Homework_26_10</AssemblyName>
+    <RootNamespace>CheldProcess2</RootNamespace>
+    <AssemblyName>CheldProcess2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
