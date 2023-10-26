@@ -30,95 +30,96 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RunCalc = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.CloseWindowButton = new System.Windows.Forms.Button();
+            this.StopButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.AvailableAssemblies = new System.Windows.Forms.ListBox();
             this.StartedAssemblies = new System.Windows.Forms.ListBox();
+            this.proc = new System.Diagnostics.Process();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(665, 18);
+            this.label2.Location = new System.Drawing.Point(367, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "AvailableAssemblies";
+            this.label2.Text = "Доступные сборки";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "StartedAssemblies";
+            this.label1.Text = "Запущенные процессы";
             // 
-            // button5
+            // RunCalc
             // 
-            this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(370, 228);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Run Calc";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.RunCalc.Location = new System.Drawing.Point(265, 230);
+            this.RunCalc.Name = "RunCalc";
+            this.RunCalc.Size = new System.Drawing.Size(75, 23);
+            this.RunCalc.TabIndex = 15;
+            this.RunCalc.Text = "Run Calc";
+            this.RunCalc.UseVisualStyleBackColor = true;
+            this.RunCalc.Click += new System.EventHandler(this.RunCalc_Click);
             // 
-            // button4
+            // RefreshButton
             // 
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(370, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Refrech";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.RefreshButton.Enabled = false;
+            this.RefreshButton.Location = new System.Drawing.Point(265, 201);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(75, 23);
+            this.RefreshButton.TabIndex = 14;
+            this.RefreshButton.Text = "Refrech";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // button3
+            // CloseWindowButton
             // 
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(342, 140);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Close Window";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.CloseWindowButton.Enabled = false;
+            this.CloseWindowButton.Location = new System.Drawing.Point(241, 172);
+            this.CloseWindowButton.Name = "CloseWindowButton";
+            this.CloseWindowButton.Size = new System.Drawing.Size(123, 23);
+            this.CloseWindowButton.TabIndex = 13;
+            this.CloseWindowButton.Text = "Close Window";
+            this.CloseWindowButton.UseVisualStyleBackColor = true;
+            this.CloseWindowButton.Click += new System.EventHandler(this.CloseWindowButton_Click);
             // 
-            // button2
+            // StopButton
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(370, 93);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Stop";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.StopButton.Enabled = false;
+            this.StopButton.Location = new System.Drawing.Point(265, 143);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(75, 23);
+            this.StopButton.TabIndex = 12;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
-            // button1
+            // StartButton
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(370, 49);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.StartButton.Enabled = false;
+            this.StartButton.Location = new System.Drawing.Point(265, 114);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(75, 23);
+            this.StartButton.TabIndex = 11;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // AvailableAssemblies
             // 
             this.AvailableAssemblies.FormattingEnabled = true;
-            this.AvailableAssemblies.Location = new System.Drawing.Point(568, 49);
+            this.AvailableAssemblies.Location = new System.Drawing.Point(370, 49);
             this.AvailableAssemblies.Name = "AvailableAssemblies";
             this.AvailableAssemblies.Size = new System.Drawing.Size(220, 303);
             this.AvailableAssemblies.TabIndex = 10;
+            this.AvailableAssemblies.SelectedIndexChanged += new System.EventHandler(this.AvailableAssemblies_SelectedIndexChanged);
             // 
             // StartedAssemblies
             // 
@@ -127,23 +128,40 @@
             this.StartedAssemblies.Name = "StartedAssemblies";
             this.StartedAssemblies.Size = new System.Drawing.Size(220, 303);
             this.StartedAssemblies.TabIndex = 9;
+            this.StartedAssemblies.SelectedIndexChanged += new System.EventHandler(this.StartedAssemblies_SelectedIndexChanged);
+            // 
+            // proc
+            // 
+            this.proc.StartInfo.Domain = "";
+            this.proc.StartInfo.LoadUserProfile = false;
+            this.proc.StartInfo.Password = null;
+            this.proc.StartInfo.StandardErrorEncoding = null;
+            this.proc.StartInfo.StandardOutputEncoding = null;
+            this.proc.StartInfo.UserName = "";
+            this.proc.SynchronizingObject = this;
+            this.proc.Exited += new System.EventHandler(this.proc_Exited);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(603, 368);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RunCalc);
+            this.Controls.Add(this.RefreshButton);
+            this.Controls.Add(this.CloseWindowButton);
+            this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.AvailableAssemblies);
             this.Controls.Add(this.StartedAssemblies);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(619, 407);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(619, 407);
             this.Name = "Form1";
-            this.Text = "Child Prosecc Management";
+            this.Text = "Управление дочерними процессами";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,13 +171,14 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RunCalc;
+        private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.Button CloseWindowButton;
+        private System.Windows.Forms.Button StopButton;
+        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.ListBox AvailableAssemblies;
         private System.Windows.Forms.ListBox StartedAssemblies;
+        private System.Diagnostics.Process proc;
     }
 }
 
